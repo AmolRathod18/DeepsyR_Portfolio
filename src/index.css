@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  :root {
+    /* ── Surfaces ── */
+    --background: 38 73% 97%;           /* cream      #fdf9f2 */
+    --foreground: 0 17% 10%;            /* charcoal   #1e1515 */
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 17% 10%;
+
+    --popover: 38 60% 97%;
+    --popover-foreground: 0 17% 10%;
+
+    /* ── Primary: rose #c96878 ── */
+    --primary: 350 47% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    /* ── Secondary: sage #84a07a ── */
+    --secondary: 104 17% 55%;
+    --secondary-foreground: 0 17% 10%;
+
+    /* ── Muted: blush #f5cfd0 ── */
+    --muted: 358 60% 89%;
+    --muted-foreground: 4 30% 32%;      /* mocha #6b3d3a */
+
+    /* ── Accent: gold #c8a25c ── */
+    --accent: 39 50% 57%;
+    --accent-foreground: 0 17% 10%;
+
+    --destructive: 0 72% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* ── Chrome ── */
+    --border: 358 40% 88%;              /* blush-tinted border */
+    --input:  358 40% 88%;
+    --ring:   350 47% 60%;
+
+    --radius: 1rem;
+
+    /* ── Sidebar ── */
+    --sidebar:                    38 73% 97%;
+    --sidebar-background:         38 73% 97%;
+    --sidebar-foreground:         0 17% 10%;
+    --sidebar-primary:            350 47% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent:             104 17% 55%;
+    --sidebar-accent-foreground:  0 17% 10%;
+    --sidebar-border:             358 40% 88%;
+    --sidebar-ring:               350 47% 60%;
+
+    /* ── Brand palette custom tokens ── */
+    --cream:      38 73% 97%;           /* #fdf9f2 */
+    --blush:      358 60% 89%;          /* #f5cfd0 */
+    --rose:       350 47% 60%;          /* #c96878 */
+    --deep-rose:  349 37% 46%;          /* #a34a5a */
+    --mocha:      4 30% 32%;            /* #6b3d3a */
+    --charcoal:   0 17% 10%;            /* #1e1515 */
+    --sage:       104 17% 55%;          /* #84a07a */
+    --gold:       39 50% 57%;           /* #c8a25c */
+    --light-sage: 109 25% 83%;          /* #ccdec8 */
+
+    /* ── Charts ── */
+    --chart-1: 350 47% 60%;   /* rose      */
+    --chart-2:  39 50% 57%;   /* gold      */
+    --chart-3: 104 17% 55%;   /* sage      */
+    --chart-4: 358 60% 89%;   /* blush     */
+    --chart-5: 349 37% 46%;   /* deep-rose */
+
+    /* ── Typography ── */
+    --font-display: 'Playfair Display', serif;
+    --font-body:    'DM Sans', sans-serif;
+
+    /* ── Shadows (rose-tinted) ── */
+    --shadow-2xs: 0 1px 3px 0px hsl(350 30% 40% / 0.06);
+    --shadow-xs:  0 1px 3px 0px hsl(350 30% 40% / 0.06);
+    --shadow-sm:  0 1px 3px 0px hsl(350 30% 40% / 0.08), 0 1px 2px -1px hsl(350 30% 40% / 0.08);
+    --shadow:     0 1px 3px 0px hsl(350 30% 40% / 0.10), 0 1px 2px -1px hsl(350 30% 40% / 0.10);
+    --shadow-md:  0 1px 3px 0px hsl(350 30% 40% / 0.10), 0 2px 4px -1px hsl(350 30% 40% / 0.10);
+    --shadow-lg:  0 1px 3px 0px hsl(350 30% 40% / 0.10), 0 4px 6px -1px hsl(350 30% 40% / 0.10);
+    --shadow-xl:  0 1px 3px 0px hsl(350 30% 40% / 0.10), 0 8px 10px -1px hsl(350 30% 40% / 0.10);
+    --shadow-2xl: 0 1px 3px 0px hsl(350 30% 40% / 0.22);
+
+    --tracking-normal: 0em;
+    --spacing: 0.25rem;
+  }
+
+  .dark {
+    --background: 0 17% 10%;            /* charcoal #1e1515 */
+    --foreground: 38 73% 97%;           /* cream text */
+
+    --card: 4 20% 14%;
+    --card-foreground: 38 73% 97%;
+
+    --popover: 4 20% 18%;
+    --popover-foreground: 38 73% 97%;
+
+    --primary: 350 50% 65%;             /* lighter rose on dark */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 104 17% 40%;
+    --secondary-foreground: 38 70% 95%;
+
+    --muted: 4 20% 20%;
+    --muted-foreground: 38 40% 75%;
+
+    --accent: 39 55% 52%;
+    --accent-foreground: 0 17% 10%;
+
+    --destructive: 0 72% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 4 20% 22%;
+    --input:  4 20% 22%;
+    --ring:   350 50% 65%;
+
+    --chart-1: 350 50% 65%;
+    --chart-2:  39 55% 60%;
+    --chart-3: 104 20% 50%;
+    --chart-4: 358 45% 75%;
+    --chart-5: 349 35% 55%;
+
+    --sidebar:                    4 20% 14%;
+    --sidebar-background:         4 20% 14%;
+    --sidebar-foreground:         38 73% 97%;
+    --sidebar-primary:            350 50% 65%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent:             104 17% 40%;
+    --sidebar-accent-foreground:  38 70% 95%;
+    --sidebar-border:             4 20% 22%;
+    --sidebar-ring:               350 50% 65%;
+
+    --shadow-2xs: 0 1px 3px 0px hsl(0 0% 0% / 0.15);
+    --shadow-xs:  0 1px 3px 0px hsl(0 0% 0% / 0.15);
+    --shadow-sm:  0 1px 3px 0px hsl(0 0% 0% / 0.20), 0 1px 2px -1px hsl(0 0% 0% / 0.20);
+    --shadow:     0 1px 3px 0px hsl(0 0% 0% / 0.20), 0 1px 2px -1px hsl(0 0% 0% / 0.20);
+    --shadow-md:  0 1px 3px 0px hsl(0 0% 0% / 0.20), 0 2px 4px -1px hsl(0 0% 0% / 0.20);
+    --shadow-lg:  0 1px 3px 0px hsl(0 0% 0% / 0.20), 0 4px 6px -1px hsl(0 0% 0% / 0.20);
+    --shadow-xl:  0 1px 3px 0px hsl(0 0% 0% / 0.20), 0 8px 10px -1px hsl(0 0% 0% / 0.20);
+    --shadow-2xl: 0 1px 3px 0px hsl(0 0% 0% / 0.40);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer utilities {
+  .section-padding {
+    @apply px-6 py-20 md:px-12 lg:px-24 lg:py-28;
+  }
+
+  /* rose #c96878 → gold #c8a25c  (buttons, service icons, badges) */
+  .gradient-warm {
+    background: linear-gradient(135deg, hsl(350 47% 60%), hsl(39 50% 57%));
+  }
+
+  /* cream #fdf9f2 → blush #f5cfd0  (hero section background) */
+  .gradient-cream {
+    background: linear-gradient(160deg, hsl(38 73% 99%), hsl(358 55% 96%), hsl(350 30% 94%));
+  }
+
+  /* rose → deep-rose → gold  (display name, headings) */
+  .text-gradient {
+    background: linear-gradient(135deg, hsl(350 47% 60%), hsl(349 37% 46%), hsl(39 50% 57%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* rose → sage  (alternate accent strip) */
+  .gradient-rose-sage {
+    background: linear-gradient(135deg, hsl(350 47% 60%), hsl(104 17% 55%));
+  }
+
+  /* section backgrounds — cream with lightest blush tint */
+  .bg-cream {
+    background: linear-gradient(160deg, hsl(38 60% 98%), hsl(358 45% 96%), hsl(350 20% 95%));
+  }
+
+  .animate-spin-slow {
+    animation: spin 12s linear infinite;
+  }
+
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+  }
+}
